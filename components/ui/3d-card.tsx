@@ -127,7 +127,7 @@ export const CardItem = ({
     <Tag
       ref={ref}
       className={cn("w-fit transition duration-200 ease-linear", className)}
-      {...rest}
+      {...(rest as React.HTMLProps<HTMLElement>)}
     >
       {children}
     </Tag>
