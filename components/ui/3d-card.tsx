@@ -109,9 +109,9 @@ export const CardItem = ({
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
-  [key: string]: any;
-}) => {
-  const ref = useRef<HTMLDivElement>(null);
+  // Use HTMLProps for a specific tag type
+} & React.HTMLProps<HTMLElement>) => {
+  const ref = useRef<HTMLElement>(null);
   const [isMouseEntered] = useMouseEnter();
 
   useEffect(() => {
@@ -127,12 +127,13 @@ export const CardItem = ({
     <Tag
       ref={ref}
       className={cn("w-fit transition duration-200 ease-linear", className)}
-      {...(rest as React.HTMLProps<HTMLElement>)}
+      {...rest} // Now 'rest' should be properly typed
     >
       {children}
     </Tag>
   );
 };
+
 
 export const useMouseEnter = () => {
   const context = useContext(MouseEnterContext);
