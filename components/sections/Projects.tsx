@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
+import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card";
 
 const projects = [
@@ -50,18 +51,20 @@ const Projects = () => {
           <p className="text-lg text-muted-foreground">Some of my recent work</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto ">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => (
             <CardContainer key={index} className="group">
-              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.2] dark:bg-gray-900 dark:border-white/[0.2] border-black/[0.1] w-auto  h-auto rounded-xl p-6 border">
+              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.2] dark:bg-gray-900 dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="90"
                   className="relative aspect-video overflow-hidden rounded-lg"
                 >
-                  <img
+                  <Image
                     src={project.image}
                     alt={project.title}
-                    className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-300"
+                    width={500} 
+                    height={300}
+                    className="group-hover:scale-110 transition-transform duration-300"
                   />
                 </CardItem>
                 <div className="p-6">

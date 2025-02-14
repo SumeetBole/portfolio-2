@@ -2,7 +2,8 @@
 
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Calendar, Briefcase, GraduationCap, Code } from "lucide-react";
+import {  Briefcase, GraduationCap, Code } from "lucide-react";
+import Image from "next/image";
 
 const About = () => {
   const ref = useRef(null);
@@ -71,11 +72,13 @@ const About = () => {
                     opacity: imageOpacity
                   }}
                 >
-                  <img
-                    src="/assets/pngtree.png"
-                    alt="Profile"
-                    className="object-cover w-full h-full "
-                  />
+                    <Image
+                      src="/assets/pngtree.png"
+                      alt="Profile"
+                      layout="fill"
+                      objectFit="cover"
+                      className="object-cover w-full h-full"
+                    />
                 </motion.div>
               </div>
             </motion.div>

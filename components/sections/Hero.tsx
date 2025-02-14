@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { BoxReveal } from "../magicui/box-reveal";
 
 const roles = ["Front-end Developer", "UI/UX Developer", "Technical Writer"];
@@ -128,10 +129,13 @@ const Hero = () => {
             <BoxReveal>
               <div className="relative w-full aspect-square max-w-md mx-auto">
                 <div className="absolute inset-0 from-primary/20 via-accent/20 to-secondary/20 rounded-full " />
-                <img
+                <Image
                   src="/assets/portrait2.jpg"
                   alt="Profile"
-                  className="rounded-full object-cover w-full h-full border-4 border-primary/20"
+                  width={400}
+                  height={400}
+                  className="rounded-full  h-full border-4 border-primary/20"
+                  priority
                 />
               </div>
             </BoxReveal>
