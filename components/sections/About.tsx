@@ -17,7 +17,7 @@ const About = () => {
 
   const timelineItems = [
     {
-      date: "2024 - Present",
+      date: "Apr2024 - Sep2024",
       title: "Front-end Developer",
       subtitle: "Atomic Asher LLP",
       icon: <Briefcase className="w-5 h-5" />,
@@ -43,7 +43,7 @@ const About = () => {
   const imageOpacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0.6]);
 
   return (
-    <section id="about" ref={ref} className="py-20 bg-muted/30 overflow-hidden">
+    <section id="about" ref={ref} className="py-20  bg-gradient-to-b from-blue-500 from-20% via-sky-200 to-cyan-100 dark:from-black  dark:via-black dark:to-gray-900 to-70% ">
       <div className="container mx-auto px-4" ref={scrollRef}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ const About = () => {
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="relative group rounded-lg overflow-hidden">
+              <div className="relative group rounded-lg overflow-hidden mt-24">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                 <motion.div 
                   className="relative aspect-square rounded-lg overflow-hidden"

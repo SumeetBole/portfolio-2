@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted/30 py-12">
+    <footer className="bg-black py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -15,7 +15,7 @@ const Footer = () => {
             className="flex flex-col md:flex-row justify-between items-center"
           >
             <div className="text-center md:text-left mb-6 md:mb-0">
-              <h3 className="text-xl font-bold mb-2">Your Name</h3>
+              <h3 className="text-xl font-bold mb-2">Sumeet S Bole</h3>
               <p className="text-muted-foreground">
                 Front-end Developer based in Mumbai, India
               </p>

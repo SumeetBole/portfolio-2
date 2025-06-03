@@ -12,7 +12,7 @@ const Contact = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="contact" ref={ref} className="py-20">
+    <section id="contact" ref={ref} className="py-20 bg-gradient-to-b from-cyan-300  via-sky-400 to-blue-500 to-90% dark:from-gray-900 from-10% dark:via-blue-900 dark:to-black to-90%">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

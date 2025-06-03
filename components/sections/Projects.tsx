@@ -39,22 +39,22 @@ const Projects = () => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" ref={ref} className="py-20 bg-muted/30">
+    <section id="projects" ref={ref} className="py-20 bg-gradient-to-b from-blue-500  via-sky-400 to-cyan-300 dark:from-black  dark:via-black dark:to-gray-900 to-70% ">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-2"
+          className="text-center "
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Projects</h2>
           <p className="text-lg text-muted-foreground">Some of my recent work</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto ">
           {projects.map((project, index) => (
             <CardContainer key={index} className="group">
-              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.2] dark:bg-gray-900 dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border">
+              <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-sky-500/[0.2] dark:bg-gray-900 dark:border-white/[0.2] border-black/[0.1] w-auto h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="90"
                   className="relative aspect-video overflow-hidden rounded-lg"
@@ -80,6 +80,7 @@ const Projects = () => {
                           className="text-xs bg-primary/10 text-primary px-2 py-1 rounded"
                         >
                           {tech}
+                          
                         </span>
                       ))}
                     </div>
